@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:id="@+id/rell"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-        >
+    android:orientation="vertical" >
 
     <FrameLayout
         android:id="@+id/camera_preview"
@@ -10,7 +10,6 @@
         android:layout_height="10sp"
         android:layout_weight="1"
         android:visibility="invisible" >
-
     </FrameLayout>
 
     <RelativeLayout
@@ -18,25 +17,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edit_text_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button_capture"
-            android:text="Capture"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="bottom"
-            />
-
-    </RelativeLayout>
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/innerRelativeLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="162dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/camera_preview"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
