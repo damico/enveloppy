@@ -444,6 +444,8 @@ public class MainActivity extends Activity {
 			
 			camParams.setPictureSize(maxW, maxH);
 			
+			c.setParameters(camParams);
+			
 			Log.d(TAG, "Pict Size: "+maxW+" x "+maxH);
 		}
 		catch (Exception e){
